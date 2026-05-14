@@ -137,17 +137,17 @@
             <div class="tab" onclick="switchSimulation(3)">Simulation 3</div>
         </div>
         
-        <!-- Simulation 1: Different Angles -->
+        <!-- Simulation 1 -->
         <div id="sim1" class="simulation-panel active">
             <iframe src="https://glowscript.org/#/user/ritabandril/folder/MyPrograms/program/Simulation1" frameborder="0"></iframe>
         </div>
         
-        <!-- Simulation 2: Earth vs Moon vs Mars -->
+        <!-- Simulation 2 -->
         <div id="sim2" class="simulation-panel">
             <iframe src="https://glowscript.org/#/user/ritabandril/folder/MyPrograms/program/Simulation2" frameborder="0"></iframe>
         </div>
         
-        <!-- Simulation 3: Offset Start -->
+        <!-- Simulation 3 -->
         <div id="sim3" class="simulation-panel">
             <iframe src="https://glowscript.org/#/user/ritabandril/folder/MyPrograms/program/Simulation3" frameborder="0"></iframe>
         </div>
@@ -160,16 +160,13 @@
     
     <script>
         function switchSimulation(num) {
-            // Hide all panels
             document.getElementById('sim1').classList.remove('active');
             document.getElementById('sim2').classList.remove('active');
             document.getElementById('sim3').classList.remove('active');
             
-            // Remove active class from all tabs
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => tab.classList.remove('active'));
             
-            // Show selected panel
             if (num === 1) {
                 document.getElementById('sim1').classList.add('active');
                 tabs[0].classList.add('active');
